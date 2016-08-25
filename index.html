@@ -190,14 +190,36 @@
     }
 
     @media screen and (max-width: 560px) {
-      #try-it iframe {
-        width:100%;
-      }
+
     }
 
 
     @media screen and (max-width: 800px) {
       /* basicly padding, and thats it dont sweat it */
+      #try-it iframe {
+        width:112%;
+        width:calc(100% + 1.2rem);
+        margin-left: -.6rem;
+        margin-right: -.6rem;
+      }
+      body > section {
+        padding-left:.6rem !important;
+        padding-right:.6rem !important;
+      }
+      #team .one {
+        width:auto;
+        padding:0 !important;
+        margin-bottom:1.4rem;
+      }
+      #sub form {
+
+      }
+      #sub input[type=email] {
+        width:60%;
+      }
+      #sub input[type=submit] {
+        width:40%;
+      }
     }
 
   </style>
@@ -261,10 +283,11 @@
 <section id="sub">
   <div class="section-wrapper">
 
+    <div class="intro">Interested ? Enter your email to get the latest news</div>
+
     <form action="//easyteam.us1.list-manage.com/subscribe/post?u=e31f613958ac45d69ff0ddce5&amp;id=9674a70137" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
       <div id="mc_embed_signup_scroll">
 
-         <div class="intro">Interested ? Enter your email to get the latest news</div>
 
          <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
          <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_e31f613958ac45d69ff0ddce5_9674a70137" tabindex="-1" value=""></div>
