@@ -57,7 +57,11 @@
       padding:1.6rem 0;
       font-family: 'PT Mono', monospace;
     }
-    h3 {
+    #try-it p {
+      line-height: 2rem;
+      padding:0 1.6rem;
+    }
+    h3, h4 {
       font-size:1.6rem;
       margin-bottom:1.6rem;
     }
@@ -69,6 +73,10 @@
       font-family: 'Muli', sans-serif;
       padding:3rem 0;
     }
+    #features h3 {
+      margin-bottom:3rem;
+      text-align:center;
+    }
     #features > article {
       /*border-top:3px dashed #638C00;*/
       padding:1.6rem 0;
@@ -78,7 +86,7 @@
       max-width:700px;
     }
     #features p {
-      line-height:24px;
+      line-height:30px;
     }
     #sub {
       background-color:#a6e30f;
@@ -140,7 +148,7 @@
       font-family: 'Muli', sans-serif;
     }
     #team h3 {
-      margin-bottom:3rem;
+      margin-bottom:4.6rem;
     }
     #team img {
       width:5rem;
@@ -221,8 +229,20 @@
         width:40%;
       }
     }
-
   </style>
+
+  <!-- Google Analytics -->
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-83326531-1', 'auto');
+  ga('send', 'pageview');
+  </script>
+  <!-- End Google Analytics -->
+
 </head>
 <body>
 
@@ -237,7 +257,7 @@
   <div class="section-wrapper">
     <h3>Have a look.</h3>
 
-    <p>As you can see, it is regular code on the left and a 3D scene on the right. The 3D scene reloads without loosing states as you type. Voila.</p>
+    <p>TL;DW : in what may be an Internet culture hommage, a guy with a weird accent demonstrates a 3d code editor. As he codes on the left part of the screen, the scene on the right reloads <u>without loosing state</u> (what we call "hot-reload").</p>
 
     <iframe id="video" width="560" height="315" src="https://www.youtube.com/embed/bAQqrnX7BsM" frameborder="0" allowfullscreen></iframe>
 
@@ -247,36 +267,37 @@
 
 <section id="features">
 
+  <h3>Let's talk features.</h3>
 
-    <article id="feature-learn">
-      <div class="section-wrapper">
-        <h3>Standards compliant</h3>
-        <p>We love the web and three.js. The code produced in thridi is plain-old javascript and will work on the good-old web. It is not tied to a hot-reload technology like closure script, react components, or stuff like that. In fact any example from the three.js website can be imported in thridi and you can start <strike>playing</strike> coding. The code here is standard web! Just one thing : everything that gets added to a scene needs an id.</p>
-      </div>
-    </article>
+  <article id="feature-learn">
+    <div class="section-wrapper">
+      <h4>Standards compliant</h4>
+      <p>We love the web and Three.js. The code produced in Thridi is plain-old javascript and will work on the modern web (where webgl works, you know ?). It is not tied to a hot-reload technology like closure script, react components, or stuff like that. In fact any example from the three.js website can be imported in thridi and you can start <strike>playing</strike> coding. The code here is standard web! The only caveat is you will need to set hardcoded <a href="http://threejs.org/docs/?q=object#Reference/Core/Object3D.uuid" target="_blank">uuid</a> (be aware that this needs to be unique) to every mesh added to a scene.</p>
+    </div>
+  </article>
 
-    <article id="feature-hot-reload">
-      <div class="section-wrapper">
-        <h3>Refresh without loosing state</h3>
-        <p>That means materials, geometries, camera, controls and animations all get to the right state as you save. Fine tuning the lights, the texture, the colors, the controls will never be this easier.</p>
-      </div>
-    </article>
-
-
-    <article id="feature-shader-mgnt">
-      <div class="section-wrapper">
-        <h3>Also, shaders</h3>
-        <p>Working with shaders in three.js is just painfull. While a shader is a piece of code, it is send as plain text. So forget about &lt;script id="fragment-shader"&gt;... or THREE[Libs]... the shader gets hot reload too, and you store them in a file that makes work and maintenance easier.</p>
-      </div>
-    </article>
+  <article id="feature-hot-reload">
+    <div class="section-wrapper">
+      <h4>Refresh without loosing state</h4>
+      <p>That means materials, geometries, camera, controls and animations all get to the right state as you keystroke. Fine tuning the lights, the texture, the colors, the controls will never be this easier. Errors are handled and displayed in real time in your editor, directly. This is the key feature. Check out the video, it explains and shows (and you might get a laugh or two).</p>
+    </div>
+  </article>
 
 
-    <!-- <article id="feature-lean">
-      <div class="section-wrapper">
-        <h3>A lean </h3>
-        <p>yes, this is a feature. For us, being lean means not wasting time. We track everything -anonymously, to get to know our customer better. For instance, you have been on this page for x seconds, you are browsing the version A of our A/B test and based on our deep learning system the chance of you being interested in this project is 82%. </p>
-      </div>
-    </article> -->
+  <article id="feature-shader-mgnt">
+    <div class="section-wrapper">
+      <h4>Also, shaders</h4>
+      <p>A shader is a small piece of code written in GLSL to run on the GPU. It has become the crux of the matter in 3D. Ok, that's cool. But ! Working with shaders in Three.js is just painfull. With Thridi, forget about the ugly &lt;script id="fragment-shader"&gt;... or the bad THREE.ShaderLib[ 'awesomeShader'] ... Edit the shader file and the scene will hot-reloads. This is the good way.</p>
+    </div>
+  </article>
+
+
+  <!-- <article id="feature-lean">
+    <div class="section-wrapper">
+      <h3>A lean boite</h3>
+      <p>yes, this is a feature. For us, being lean means not wasting time. We track everything -anonymously, to get to know our customer better. For instance, you have been on this page for x seconds, you are browsing the version A of our A/B test and based on our deep learning system the chance of you being interested in this project is 82%. </p>
+    </div>
+  </article> -->
 
 </section>
 
@@ -285,15 +306,13 @@
 
     <div class="intro">Interested ? Enter your email to get the latest news</div>
 
-    <form action="//easyteam.us1.list-manage.com/subscribe/post?u=e31f613958ac45d69ff0ddce5&amp;id=9674a70137" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+    <form onsubmit="ga('send', 'event', 'Subscribe Form', 'Submit');" action="//easyteam.us1.list-manage.com/subscribe/post?u=e31f613958ac45d69ff0ddce5&amp;id=9674a70137" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
       <div id="mc_embed_signup_scroll">
-
 
          <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
          <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_e31f613958ac45d69ff0ddce5_9674a70137" tabindex="-1" value=""></div>
 
-
-    	   <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required ><input type="submit" value="Subscribe me!" name="subscribe" id="mc-embedded-subscribe" class="button">
+    	   <input onfocus="ga('send', 'event', 'Subscribe Form', 'Focused');" type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required ><input type="submit" value="Subscribe me!" name="subscribe" id="mc-embedded-subscribe" class="button">
 
       </div>
     </form>
@@ -308,7 +327,7 @@
       <img src="fmf.jpg" alt="@marcelfalliere" />
       <span class="name">Frédéric Marcel Falliere</span>
       <p>Marcel has a background in frontend and backend develepment. Put 20~ website and mobile apps in production. Gamer (<a href="http://www.dailymotion.com/video/x2fady_tfc-bodycount_videogames" target="_blank">team</a> <a href="https://www.facebook.com/groups/teamfortressclassic/" target="_blank">fortress</a> <a href="http://leex.free.fr/modules.php?name=News&file=article&sid=5" target="_blank">classic</a> champion).</p>
-      <a class="twitter" href="https://twitter.com/marcelfalliere" target="_blank">@marcelfalliere</a>
+      <a class="twitter" onclick="ga('send', 'event', 'marcelfalliereTwitter');" href="https://twitter.com/marcelfalliere" target="_blank">@marcelfalliere</a>
     </div><!--
     --><div class="one him">
       <img src="coco.png" alt="Corent G." />
@@ -326,7 +345,35 @@
 
 </body>
 
+
+<!-- Google anal (yeah I made that joke. I'm french so. I can. You can't. Because you are most likely a human being curious enough to read through this source code, and therefore not the kind of people liking pee-pee jokes like that. Okay why do I have all this hate ? I love you, who ever you are. Smile and move and do it.) -->
 <script>
 
+!function(e,n,t){"use strict";function r(){for(var e=1;e<arguments.length;e++)for(var n in arguments[e])arguments[e].hasOwnProperty(n)&&(arguments[0][n]=arguments[e][n]);return arguments[0]}function o(e,n){for(var t=0;t<e.length;t++)if(e[t]===n)return!0;return!1}function i(e){return"[object Array]"===Object.prototype.toString.call(e)}function a(){return Math.max(n.documentElement.scrollHeight,n.body.scrollHeight,n.documentElement.offsetHeight,n.body.offsetHeight,n.documentElement.clientHeight)}function l(){return e.innerHeight||n.documentElement.clientHeight||n.body.clientHeight}function u(){return e.pageYOffset||("CSS1Compat"===n.compatMode?n.documentElement.scrollTop:n.body.scrollTop)}function c(e){return e.getBoundingClientRect().top+u()}function f(r){return"undefined"!=typeof e.jQuery?e.jQuery(r).get(0):"undefined"!=typeof n.querySelector?n.querySelector(r):"#"==r.charAt(0)?n.getElementById(r.substr(1)):t}function g(e,n,t){e.addEventListener?e.addEventListener(n,t,!1):e.attachEvent?e.attachEvent("on"+n,t):e["on"+n]=t}function s(e,n,t){e.removeEventListener?e.removeEventListener(n,t,!1):e.detachEvent?e.detachEvent("on"+n,t):e["on"+type]=null}function p(n){b=!0,g(e,"scroll",n)}function h(n){b=!1,s(e,"scroll",n)}var v,m,d,y,D,E={minHeight:0,elements:[],percentage:!0,userTiming:!0,pixelDepth:!0,nonInteraction:!0,gaGlobal:!1,gtmOverride:!1},S=r({},E),I=[],b=!1,T=0,H=function(n){function t(n,t,r,o){y?(y({event:"ScrollDistance",eventCategory:"Scroll Depth",eventAction:n,eventLabel:t,eventValue:1,eventNonInteraction:S.nonInteraction}),S.pixelDepth&&arguments.length>2&&r>T&&(T=r,y({event:"ScrollDistance",eventCategory:"Scroll Depth",eventAction:"Pixel Depth",eventLabel:b(r),eventValue:1,eventNonInteraction:S.nonInteraction})),S.userTiming&&arguments.length>3&&y({event:"ScrollTiming",eventCategory:"Scroll Depth",eventAction:n,eventLabel:t,eventTiming:o})):(v&&(e[d]("send","event","Scroll Depth",n,t,1,{nonInteraction:S.nonInteraction}),S.pixelDepth&&arguments.length>2&&r>T&&(T=r,e[d]("send","event","Scroll Depth","Pixel Depth",b(r),1,{nonInteraction:S.nonInteraction})),S.userTiming&&arguments.length>3&&e[d]("send","timing","Scroll Depth",n,o,t)),m&&(_gaq.push(["_trackEvent","Scroll Depth",n,t,1,S.nonInteraction]),S.pixelDepth&&arguments.length>2&&r>T&&(T=r,_gaq.push(["_trackEvent","Scroll Depth","Pixel Depth",b(r),1,S.nonInteraction])),S.userTiming&&arguments.length>3&&_gaq.push(["_trackTiming","Scroll Depth",n,o,t,100])))}function i(e){return{"25%":parseInt(.25*e,10),"50%":parseInt(.5*e,10),"75%":parseInt(.75*e,10),"100%":e-5}}function g(e,n,r){for(var i in e)if(e.hasOwnProperty(i)){var a=e[i];!o(I,i)&&n>=a&&(t("Percentage",i,n,r),I.push(i))}}function s(e,n,r){for(var i=0;i<e.length;i++){var a=e[i];if(!o(I,a)){var l="string"==typeof a?f(a):a;if(l){var u=c(l);n>=u&&(t("Elements",a,n,r),I.push(a))}}}}function b(e){return(250*Math.floor(e/250)).toString()}function H(e,n){var t,r,o,i=null,a=0,l=function(){a=new Date,i=null,o=e.apply(t,r)};return function(){var u=new Date;a||(a=u);var c=n-(u-a);return t=this,r=arguments,0>=c?(clearTimeout(i),i=null,a=u,o=e.apply(t,r)):i||(i=setTimeout(l,c)),o}}var _=+new Date;S=r({},E,n),a()<S.minHeight||(S.gaGlobal?(v=!0,d=S.gaGlobal):"function"==typeof ga?(v=!0,d="ga"):"function"==typeof __gaTracker&&(v=!0,d="__gaTracker"),"undefined"!=typeof _gaq&&"function"==typeof _gaq.push&&(m=!0),"function"==typeof S.eventHandler?y=S.eventHandler:"undefined"==typeof dataLayer||"function"!=typeof dataLayer.push||S.gtmOverride||(y=function(e){dataLayer.push(e)}),D=H(function(){var e=a(),n=l(),t=u()+n,r=i(e),o=+new Date-_;return I.length>=4+S.elements.length?void h():(S.elements&&s(S.elements,t,o),void(S.percentage&&g(r,t,o)))},500),p(D))},_=function(){I=[],T=0,"undefined"!=typeof D&&(h(D),p(D))},x=function(e){if("undefined"!=typeof e&&i(e)){for(var n=0;n<e.length;n++){var t=e[n],r=S.elements.indexOf(t);-1==r&&S.elements.push(t)}b||p()}},L=function(e){if("undefined"!=typeof e&&i(e))for(var n=0;n<e.length;n++){var t=e[n],r=S.elements.indexOf(t);r>-1&&S.elements.splice(r,1);var o=I.indexOf(t);o>-1&&I.splice(o,1)}};e.gascrolldepth={init:H,reset:_,addElements:x,removeElements:L},"undefined"!=typeof e.jQuery&&(e.jQuery.gascrolldepth=H)}(window,document);
+
+gascrolldepth.init({
+  percentage:false,
+  pixelDepth:false,
+  elements:[
+    '#intro',
+    '#try-it',
+    '#feature-learn',
+    '#feature-hot-reload',
+    '#feature-feature-shader-mgnt',
+    '#sub',
+    '#team'
+  ]
+});
+
 </script>
+
+<!-- Three.js -->
+<script src="three.min.js"></script>
+<script>
+
+
+
+</script>
+
+
 </html>
