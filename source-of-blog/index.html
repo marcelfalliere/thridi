@@ -1,0 +1,29 @@
+---
+layout: default
+---
+
+<link href="https://fonts.googleapis.com/css?family=Slabo+27px" rel="stylesheet">
+
+<div class="home">
+
+  <ul class="post-list">
+    {% for post in site.posts %}
+      <li>
+        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+
+        <h2>
+          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title | escape }}</a>
+        </h2>
+
+        <div class="entry">
+          {{ post.excerpt }}
+        </div>
+        <a class="excerpt-link" href="{{ post.url | prepend: site.baseurl }}">read more</a>
+
+      </li>
+    {% endfor %}
+  </ul>
+
+  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+
+</div>

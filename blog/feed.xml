@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Thridi - the blog</title>
+    <description>Thridi is the missing editor for Three.js and WebGL. It has code reload. It respects the standards. It aims at making life painless for three.js developers. It will have everything an IDE needs : code completion, inline errors, save, search. Still in the making, please subscribe to the newsletter at thridi.io to be kept up to date. It's moving fast, yo.
+</description>
+    <link>/blog/</link>
+    <atom:link href="/blog/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Mon, 26 Sep 2016 23:43:00 +0200</pubDate>
+    <lastBuildDate>Mon, 26 Sep 2016 23:43:00 +0200</lastBuildDate>
+    <generator>Jekyll v3.2.1</generator>
+    
+      <item>
+        <title>First and raw product demo</title>
+        <description>&lt;p&gt;With this first blog post I want to show you where the development is at, yo ! Raw footage incoming. In this video, you’ll see a demonstration of thridi. The scene (FYI my test case scene) is pretty basic : &lt;strong&gt;100 red cubes and a camera rotating on itself (y-axis), the camera is positioned in the middle of that cube field.&lt;/strong&gt; After a cringe-worthy introduction I’ll update the 3D scene without reloading, or with &lt;strong&gt;hot-reload&lt;/strong&gt;, and we’ll see changes happening in real time. Here’s a list of what you’ll see :&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;changing the renderer color (with hot-reload)&lt;/li&gt;
+  &lt;li&gt;changing the camera y position (with hot-reload)&lt;/li&gt;
+  &lt;li&gt;changing cubes positions and colors (with hot-reload)&lt;/li&gt;
+  &lt;li&gt;the caveat of thridi : UUID&lt;/li&gt;
+  &lt;li&gt;adding some more cubes (with hot-reload)&lt;/li&gt;
+  &lt;li&gt;changing the newly added cubes colors (with hot-reload)&lt;/li&gt;
+  &lt;li&gt;adding fog (with hot-reload)&lt;/li&gt;
+  &lt;li&gt;a wild bug appears ! actually not a bug, just fog taking its time …&lt;/li&gt;
+  &lt;li&gt;changing the camera rotation in the update() function (w/o hot-reload, yet- this will be enhanced in the future)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;!--more--&gt;
+
+&lt;p&gt;Thridi, fow now, is pretty basic UI-wise. The window is split in half :&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;on the left : the code describing the 3D scene&lt;/li&gt;
+  &lt;li&gt;on the right : the 3D scene described by the code&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Thrilled ? Then let’s watch some 3D, with thridi, thanks to three.js.&lt;/p&gt;
+
+&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/F4Rdhq2zvBk&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+
+&lt;p&gt;I want to keep the UI simple but still, I need &lt;em&gt;at least&lt;/em&gt; the good-old FPS meter (maybe in some status bar ?). Also I’d like to be able to detect syntax errors that blocks the execution. And then of course, a lot more has to be done on the hot-reload part.&lt;/p&gt;
+
+&lt;div id=&quot;disqus_thread&quot;&gt;&lt;/div&gt;
+&lt;script&gt;
+var disqus_config = function () {
+    this.page.url = location.href; 
+    this.page.identifier = location.href.substring(location.href.lastIndexOf('/')+1, location.href.lastIndexOf('.html'));
+};
+(function() { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+    s.src = '//thridi.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+})();
+&lt;/script&gt;
+
+&lt;noscript&gt;Please enable JavaScript to view the &lt;a href=&quot;https://disqus.com/?ref_noscript&quot;&gt;comments powered by Disqus.&lt;/a&gt;&lt;/noscript&gt;
+
+</description>
+        <pubDate>Thu, 08 Sep 2016 13:37:00 +0200</pubDate>
+        <link>/blog/2016/09/08/thridi-first-and-raw-demo-of-threejs-hot-code-reload.html</link>
+        <guid isPermaLink="true">/blog/2016/09/08/thridi-first-and-raw-demo-of-threejs-hot-code-reload.html</guid>
+        
+        
+      </item>
+    
+  </channel>
+</rss>
