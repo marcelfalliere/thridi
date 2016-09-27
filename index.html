@@ -2,6 +2,8 @@
 <html data-ng-app='hockey-app' lang='en'>
 <head>
 
+  <title>thridi : three.js editor with hot code reload</title>
+
   <meta charset='utf-8'>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="Keywords" content="Threejs,Webgl,Editor,Hot reload,OSGI,auto refresh,3d">
@@ -41,7 +43,6 @@
       bottom:0;
       left:0;
       right:0;
-      background-color:red;
     }
 
     #intro {
@@ -80,6 +81,9 @@
       margin-bottom:0;
       background-color:#e0e0e0;
       display:inline-block;
+    }
+    #try-id p b {
+      font-weight:900;
     }
     #try-it h3 {
       background-color:#e0e0e0;
@@ -202,6 +206,7 @@
     #team p {
       font-size:.9rem;
       line-height:22px;
+      text-align:justify;
     }
     #team a.twitter {
       display:block;
@@ -316,47 +321,50 @@
   <div class="section-wrapper">
     <h3>Please, have a look.</h3><br/>
 
-    <iframe id="video" width="560" height="315" src="https://www.youtube.com/embed/bAQqrnX7BsM" frameborder="0" allowfullscreen></iframe>
+    <iframe id="video" width="560" height="315" src="https://www.youtube.com/embed/F4Rdhq2zvBk" frameborder="0" allowfullscreen></iframe>
 
-    <p>TL;DW : in what may be an Internet culture hommage, a guy with a weird accent demonstrates a 3d code editor. As he codes on the left part of the screen, the scene on the right refreshes <u>without loosing state</u> (what we call "hot-reload").</p>
+    <!-- <p>TL;DW : in what may be an Internet culture hommage, a guy with a weird accent demonstrates a 3d code editor. As he codes on the left part of the screen, the scene on the right refreshes <u>without loosing state</u> (what we call "hot-reload").</p> -->
+
+    <p>TL;DW : demo of a three.js editor. Updating the code on the left part of the screen refreshes the scene on the right part <b>without loosing state</b> (what we call "hot-reload"). Find out more on the explained <a href="/blog/2016/09/08/thridi-first-and-raw-demo-of-threejs-hot-code-reload.html" target="_href">blog post</a></p>
 
   </div>
 </section>
 
-
 <section id="features">
 
-  <h3>Let's talk features.</h3>
+  <h3>Now let's talk features.</h3>
 
   <article id="feature-learn">
     <div class="section-wrapper">
       <h4>Standards compliant</h4>
-      <p>We love the web and Three.js. The code produced in Thridi is plain-old javascript and will work on the modern web (where webgl works, you know ?). It is not tied to a hot-reload technology like closure script, react components, or stuff like that. In fact any example from the three.js website can be imported in thridi and you can start <strike>playing</strike> coding. The code here is standard web! The only caveat is you will need to set hardcoded <a href="http://threejs.org/docs/?q=object#Reference/Core/Object3D.uuid" target="_blank">uuid</a> (be aware that this needs to be unique) to every mesh added to a scene.</p>
+      <p>We love the web and Three.js. The code produced in Thridi is plain-old javascript and will work on the modern web (where webgl works, you know ?). It is not tied to a hot-reload technology like closure script, react components, or proprietary framework. In fact any example from the three.js website can be imported in thridi and you can start <strike>playing</strike> coding. The code here is standard web!</p>
     </div>
   </article>
 
   <article id="feature-hot-reload">
     <div class="section-wrapper">
-      <h4>Refresh without loosing state</h4>
-      <p>That means materials, geometries, camera, controls and animations all get to the right state as you keystroke. Fine tuning the lights, the texture, the colors, the controls will never be this easier. Errors are handled and displayed in real time in your editor, directly. This is the key feature. Check out the video, it explains and shows (and you might get a laugh or two).</p>
+      <h4>Hot reload</h4>
+      <p>That means materials, geometries, camera, controls, animations (everything in the scene) : they all get to the right state as you keystroke. Fine tuning the lights, the texture, the colors, the controls will never be this easier.This is the key feature of thridi. Check out the video above for a demonstration.</p>
     </div>
   </article>
 
 
   <article id="feature-shader-mgnt">
     <div class="section-wrapper">
-      <h4>Also, shaders</h4>
-      <p>A shader is a small piece of code written in GLSL to run on the GPU. It has become the crux of the matter in 3D. Ok, that's cool. But ! Working with shaders in Three.js is just painfull. With Thridi, forget about the ugly &lt;script id="fragment-shader"&gt;... or the bad THREE.ShaderLib[ 'awesomeShader'] ... Edit the shader file and the scene will hot-reloads. This is the good way.</p>
+      <h4>Shaders</h4>
+      <p>A shader is a small piece of code written in GLSL to run on the GPU. It has become the crux of the matter in 3D. Ok. But ! working with shaders in Three.js is just painfull. With Thridi, forget about the ugly &lt;script id="fragment-shader"&gt;... or the bad THREE.ShaderLib[ 'awesomeShader'] ... Edit the shader in a separate file. You will still get hot reload. This is the good way.</p>
     </div>
   </article>
 
-
-  <!-- <article id="feature-lean">
+  <article id="feature-ide">
     <div class="section-wrapper">
-      <h3>A lean boite</h3>
-      <p>yes, this is a feature. For us, being lean means not wasting time. We track everything -anonymously, to get to know our customer better. For instance, you have been on this page for x seconds, you are browsing the version A of our A/B test and based on our deep learning system the chance of you being interested in this project is 82%. </p>
+      <h4>IDE for your everyday needs</h4>
+      <p>Thridi aims at answering your everyday needs when it comes to three.js development. Are your making a 3D background that moves as the user scrolls in the page ? Do you use the webcam ? The mic input ? Or simply you don't want to use Unity and the like, and have an integrated work environment ?</p>
     </div>
-  </article> -->
+  </article>
+
+  <!-- Share your work -->
+
 
 </section>
 
@@ -381,24 +389,24 @@
 
 <section id="team"><!--
 --><div class="section-wrapper">
-    <h3>The humans behind thridi</h3>
+    <h3>The human behind thridi</h3>
     <div class="one me">
       <img src="fmf.jpg" alt="@marcelfalliere" />
       <span class="name">Frédéric Marcel Falliere</span>
-      <p>Marcel has a background in frontend and backend develepment. Put 20~ website and mobile apps in production. Gamer (<a href="http://www.dailymotion.com/video/x2fady_tfc-bodycount_videogames" target="_blank">team</a> <a href="https://www.facebook.com/groups/teamfortressclassic/" target="_blank">fortress</a> <a href="http://leex.free.fr/modules.php?name=News&file=article&sid=5" target="_blank">classic</a> champion).</p>
+      <p>Marcel has a background in frontend and backend develepment. Put 20~ website and mobile apps in production. Gamer (<a href="http://www.dailymotion.com/video/x2fady_tfc-bodycount_videogames" target="_blank">team</a> <a href="https://www.facebook.com/groups/teamfortressclassic/" target="_blank">fortress</a> <a href="http://leex.free.fr/modules.php?name=News&file=article&sid=5" target="_blank">classic</a>) champion.</p>
       <a class="twitter" onclick="ga('send', 'event', 'marcelfalliereTwitter');" href="https://twitter.com/marcelfalliere" target="_blank">@marcelfalliere</a>
     </div><!--
     --><div class="one him">
-      <img src="coco.png" alt="Corent G." />
-      <span class="name">Corentin G.</span>
-      <p>Corentin has a background in 3d and game design. Regular at gamejam, he won multiple awards.</p>
-    </div>
-  </div><!--
---></section>
+      <img src="coco.png" alt="Luca D.l.R" />
+      <span class="name">Luca D.l.R.</span>
+      <p>Luca has a background in 3d and game design. Regular at gamejam, he won multiple awards. He loves his anonymity.</p>
+    </div><!--
+  --></div>
+</section>
 
 <footer>
   <div class="section-wrapper">
-    The code produced in the editor is yours 100%. Documentation will be under <a href="https://tldrlegal.com/license/apache-license-2.0-(apache-2.0)" target="_blank">Apache2</a> | © 2016 thridi</div>
+    The code produced in the editor is yours 100%. Thridi's documentation will be under <a href="https://tldrlegal.com/license/apache-license-2.0-(apache-2.0)" target="_blank">Apache2</a> | © 2016 thridi</div>
   </div>
 </footer>
 
