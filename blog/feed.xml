@@ -6,9 +6,45 @@
 </description>
     <link>/blog/</link>
     <atom:link href="/blog/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 27 Sep 2016 17:13:25 +0200</pubDate>
-    <lastBuildDate>Tue, 27 Sep 2016 17:13:25 +0200</lastBuildDate>
+    <pubDate>Tue, 01 Nov 2016 07:10:10 +0100</pubDate>
+    <lastBuildDate>Tue, 01 Nov 2016 07:10:10 +0100</lastBuildDate>
     <generator>Jekyll v3.2.1</generator>
+    
+      <item>
+        <title>October dev video blog</title>
+        <description>&lt;p&gt;In this way-too-long video, you’ll see what’s new since last month :&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;more objects supported by the hot-reload (material, mesh, geometry, light)&lt;/li&gt;
+  &lt;li&gt;more properties supported by the hot-reload (geometry initial parameters, lights attributes, …)&lt;/li&gt;
+  &lt;li&gt;global variables supported by hot-reload (almost)&lt;/li&gt;
+  &lt;li&gt;toolbar buttons : pause, reload, wireframe and … &lt;strong&gt;share&lt;/strong&gt; !&lt;/li&gt;
+  &lt;li&gt;the thridi.io gallery&lt;/li&gt;
+  &lt;li&gt;the discovery of a bug !&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Still in a raw format (no editing, no nothing : just the software and me on the mic), I’m building a scene withs light and basic objects movement. At some point there’s a quirk - a bug. Discovered live ! But “c’est pas grave”, you know, the goal of this video is to inform you as authentically as possible.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;p&gt;Here’s the video.&lt;/p&gt;
+
+&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/VtQ2c_f7J78?list=PLyREgNfUGsK4yLKXVFahSIBBEycGURRim&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+
+&lt;p&gt;(If you haven’t seen last month video blog, be sure to check it out : &lt;a href=&quot;/blog/2016/09/08/thridi-first-and-raw-demo-of-threejs-hot-code-reload.html&quot;&gt;september video blog&lt;/a&gt;)&lt;/p&gt;
+
+&lt;p&gt;One of the question as ask myself is : are global variables really important when it comes to live reload ?&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;reflexion intensifies&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;What I will do : new variable or variable modifications will be detected, and a hard refresh will be operated or suggested by the UI.&lt;/p&gt;
+</description>
+        <pubDate>Mon, 31 Oct 2016 05:06:06 +0100</pubDate>
+        <link>/blog/2016/10/31/october-dev-video-blog.html</link>
+        <guid isPermaLink="true">/blog/2016/10/31/october-dev-video-blog.html</guid>
+        
+        
+      </item>
     
       <item>
         <title>First and raw product demo</title>
@@ -37,7 +73,7 @@
 
 &lt;p&gt;Thrilled ? Then let’s watch some 3D, with thridi, thanks to three.js.&lt;/p&gt;
 
-&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/F4Rdhq2zvBk&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/F4Rdhq2zvBk?list=PLyREgNfUGsK4yLKXVFahSIBBEycGURRim&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
 
 &lt;p&gt;I want to keep the UI simple but still, I need &lt;em&gt;at least&lt;/em&gt; the good-old FPS meter (maybe in some status bar ?). Also I’d like to be able to detect syntax errors that blocks the execution. And then of course, a lot more has to be done on the hot-reload part.&lt;/p&gt;
 

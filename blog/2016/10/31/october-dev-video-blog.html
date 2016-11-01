@@ -6,13 +6,13 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>First and raw product demo</title>
-  <meta name="description" content="With this first blog post I want to show you where the development is at, yo ! Raw footage incoming. In this video, you’ll see a demonstration of thridi. The...">
+  <title>October dev video blog</title>
+  <meta name="description" content="In this way-too-long video, you’ll see what’s new since last month : more objects supported by the hot-reload (material, mesh, geometry, light) more properti...">
 
   
   
   <link rel="stylesheet" href="/blog/css/main.css">
-  <link rel="canonical" href="/blog/2016/09/08/thridi-first-and-raw-demo-of-threejs-hot-code-reload.html">
+  <link rel="canonical" href="/blog/2016/10/31/october-dev-video-blog.html">
   <link rel="alternate" type="application/rss+xml" title="Thridi - the blog" href="/blog/feed.xml">
   
   
@@ -65,56 +65,37 @@
 <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
 
   <header class="post-header">
-    <h1 class="post-title" itemprop="name headline">First and raw product demo</h1>
-    <p class="post-meta"><time datetime="2016-09-08T13:37:00+02:00" itemprop="datePublished">Sep 8, 2016</time></p>
+    <h1 class="post-title" itemprop="name headline">October dev video blog</h1>
+    <p class="post-meta"><time datetime="2016-10-31T05:06:06+01:00" itemprop="datePublished">Oct 31, 2016</time></p>
   </header>
 
   <div class="post-content" itemprop="articleBody">
-    <p>With this first blog post I want to show you where the development is at, yo ! Raw footage incoming. In this video, you’ll see a demonstration of thridi. The scene (FYI my test case scene) is pretty basic : <strong>100 red cubes and a camera rotating on itself (y-axis), the camera is positioned in the middle of that cube field.</strong> After a cringe-worthy introduction I’ll update the 3D scene without reloading, or with <strong>hot-reload</strong>, and we’ll see changes happening in real time. Here’s a list of what you’ll see :</p>
+    <p>In this way-too-long video, you’ll see what’s new since last month :</p>
 
 <ul>
-  <li>changing the renderer color (with hot-reload)</li>
-  <li>changing the camera y position (with hot-reload)</li>
-  <li>changing cubes positions and colors (with hot-reload)</li>
-  <li>the caveat of thridi : UUID</li>
-  <li>adding some more cubes (with hot-reload)</li>
-  <li>changing the newly added cubes colors (with hot-reload)</li>
-  <li>adding fog (with hot-reload)</li>
-  <li>a wild bug appears ! actually not a bug, just fog taking its time …</li>
-  <li>changing the camera rotation in the update() function (w/o hot-reload, yet- this will be enhanced in the future)</li>
+  <li>more objects supported by the hot-reload (material, mesh, geometry, light)</li>
+  <li>more properties supported by the hot-reload (geometry initial parameters, lights attributes, …)</li>
+  <li>global variables supported by hot-reload (almost)</li>
+  <li>toolbar buttons : pause, reload, wireframe and … <strong>share</strong> !</li>
+  <li>the thridi.io gallery</li>
+  <li>the discovery of a bug !</li>
 </ul>
+
+<p>Still in a raw format (no editing, no nothing : just the software and me on the mic), I’m building a scene withs light and basic objects movement. At some point there’s a quirk - a bug. Discovered live ! But “c’est pas grave”, you know, the goal of this video is to inform you as authentically as possible.</p>
 
 <!--more-->
 
-<p>Thridi, fow now, is pretty basic UI-wise. The window is split in half :</p>
+<p>Here’s the video.</p>
 
-<ul>
-  <li>on the left : the code describing the 3D scene</li>
-  <li>on the right : the 3D scene described by the code</li>
-</ul>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/VtQ2c_f7J78?list=PLyREgNfUGsK4yLKXVFahSIBBEycGURRim" frameborder="0" allowfullscreen=""></iframe>
 
-<p>Thrilled ? Then let’s watch some 3D, with thridi, thanks to three.js.</p>
+<p>(If you haven’t seen last month video blog, be sure to check it out : <a href="/blog/2016/09/08/thridi-first-and-raw-demo-of-threejs-hot-code-reload.html">september video blog</a>)</p>
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/F4Rdhq2zvBk?list=PLyREgNfUGsK4yLKXVFahSIBBEycGURRim" frameborder="0" allowfullscreen=""></iframe>
+<p>One of the question as ask myself is : are global variables really important when it comes to live reload ?</p>
 
-<p>I want to keep the UI simple but still, I need <em>at least</em> the good-old FPS meter (maybe in some status bar ?). Also I’d like to be able to detect syntax errors that blocks the execution. And then of course, a lot more has to be done on the hot-reload part.</p>
+<p><em>reflexion intensifies</em></p>
 
-<div id="disqus_thread"></div>
-<script>
-var disqus_config = function () {
-    this.page.url = location.href; 
-    this.page.identifier = location.href.substring(location.href.lastIndexOf('/')+1, location.href.lastIndexOf('.html'));
-};
-(function() { // DON'T EDIT BELOW THIS LINE
-    var d = document, s = d.createElement('script');
-    s.src = '//thridi.disqus.com/embed.js';
-    s.setAttribute('data-timestamp', +new Date());
-    (d.head || d.body).appendChild(s);
-})();
-</script>
-
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-
+<p>What I will do : new variable or variable modifications will be detected, and a hard refresh will be operated or suggested by the UI.</p>
 
   </div>
 
